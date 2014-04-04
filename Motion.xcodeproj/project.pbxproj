@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		073A769F18E953800039DBEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073A769E18E953800039DBEF /* Foundation.framework */; };
+		073A76A118E953800039DBEF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073A76A018E953800039DBEF /* CoreGraphics.framework */; };
+		073A76A318E953800039DBEF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073A76A218E953800039DBEF /* UIKit.framework */; };
+		073A76A918E953800039DBEF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 073A76A718E953800039DBEF /* InfoPlist.strings */; };
+		073A76AB18E953800039DBEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 073A76AA18E953800039DBEF /* main.m */; };
+		073A76AF18E953800039DBEF /* CTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 073A76AE18E953800039DBEF /* CTAppDelegate.m */; };
+		073A76B118E953800039DBEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 073A76B018E953800039DBEF /* Images.xcassets */; };
+		073A76B818E953800039DBEF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073A76B718E953800039DBEF /* XCTest.framework */; };
+		073A76B918E953800039DBEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073A769E18E953800039DBEF /* Foundation.framework */; };
+		073A76BA18E953800039DBEF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073A76A218E953800039DBEF /* UIKit.framework */; };
+		073A76C218E953800039DBEF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 073A76C018E953800039DBEF /* InfoPlist.strings */; };
+		073A76C418E953810039DBEF /* MotionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 073A76C318E953810039DBEF /* MotionTests.m */; };
+		073A76D118E953D60039DBEF /* CTMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 073A76CF18E953D60039DBEF /* CTMainController.m */; };
+		073A76D218E953D60039DBEF /* CTMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 073A76D018E953D60039DBEF /* CTMainController.xib */; };
+		073A76D418E954B00039DBEF /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073A76D318E954B00039DBEF /* CoreMotion.framework */; };
+		073A76D818E955B10039DBEF /* CTMotionDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 073A76D718E955B10039DBEF /* CTMotionDayView.m */; };
+		073A76DA18E955C40039DBEF /* CTMotionDayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 073A76D918E955C40039DBEF /* CTMotionDayView.xib */; };
+		073A76E018E957D70039DBEF /* UITableViewCell+CTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 073A76DD18E957D70039DBEF /* UITableViewCell+CTExtensions.m */; };
+		073A76E118E957D70039DBEF /* UIView+CTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 073A76DF18E957D70039DBEF /* UIView+CTExtensions.m */; };
+		07733A2818EA909A002AE039 /* CTStepCounterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07733A2618EA909A002AE039 /* CTStepCounterController.m */; };
+		07733A2918EA909A002AE039 /* CTStepCounterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07733A2718EA909A002AE039 /* CTStepCounterController.xib */; };
+		07A20F7C18ED25B600E3E773 /* NSDate+CTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A20F7B18ED25B600E3E773 /* NSDate+CTExtensions.m */; };
+		07A20F7F18ED271100E3E773 /* NSString+CTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A20F7E18ED271100E3E773 /* NSString+CTExtensions.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		073A76BB18E953800039DBEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 073A769318E953800039DBEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 073A769A18E953800039DBEF;
+			remoteInfo = Motion;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		073A769B18E953800039DBEF /* Motion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Motion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		073A769E18E953800039DBEF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		073A76A018E953800039DBEF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		073A76A218E953800039DBEF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		073A76A618E953800039DBEF /* Motion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Motion-Info.plist"; sourceTree = "<group>"; };
+		073A76A818E953800039DBEF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		073A76AA18E953800039DBEF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		073A76AC18E953800039DBEF /* Motion-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Motion-Prefix.pch"; sourceTree = "<group>"; };
+		073A76AD18E953800039DBEF /* CTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTAppDelegate.h; sourceTree = "<group>"; };
+		073A76AE18E953800039DBEF /* CTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTAppDelegate.m; sourceTree = "<group>"; };
+		073A76B018E953800039DBEF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		073A76B618E953800039DBEF /* MotionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		073A76B718E953800039DBEF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		073A76BF18E953800039DBEF /* MotionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MotionTests-Info.plist"; sourceTree = "<group>"; };
+		073A76C118E953800039DBEF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		073A76C318E953810039DBEF /* MotionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MotionTests.m; sourceTree = "<group>"; };
+		073A76CE18E953D60039DBEF /* CTMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMainController.h; sourceTree = "<group>"; };
+		073A76CF18E953D60039DBEF /* CTMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMainController.m; sourceTree = "<group>"; };
+		073A76D018E953D60039DBEF /* CTMainController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTMainController.xib; sourceTree = "<group>"; };
+		073A76D318E954B00039DBEF /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		073A76D618E955B10039DBEF /* CTMotionDayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMotionDayView.h; sourceTree = "<group>"; };
+		073A76D718E955B10039DBEF /* CTMotionDayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMotionDayView.m; sourceTree = "<group>"; };
+		073A76D918E955C40039DBEF /* CTMotionDayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTMotionDayView.xib; sourceTree = "<group>"; };
+		073A76DC18E957D70039DBEF /* UITableViewCell+CTExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+CTExtensions.h"; sourceTree = "<group>"; };
+		073A76DD18E957D70039DBEF /* UITableViewCell+CTExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+CTExtensions.m"; sourceTree = "<group>"; };
+		073A76DE18E957D70039DBEF /* UIView+CTExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CTExtensions.h"; sourceTree = "<group>"; };
+		073A76DF18E957D70039DBEF /* UIView+CTExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CTExtensions.m"; sourceTree = "<group>"; };
+		073A76E218E958180039DBEF /* CTExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTExtensions.h; sourceTree = "<group>"; };
+		07733A2518EA909A002AE039 /* CTStepCounterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTStepCounterController.h; sourceTree = "<group>"; };
+		07733A2618EA909A002AE039 /* CTStepCounterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTStepCounterController.m; sourceTree = "<group>"; };
+		07733A2718EA909A002AE039 /* CTStepCounterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTStepCounterController.xib; sourceTree = "<group>"; };
+		07A20F7A18ED25B600E3E773 /* NSDate+CTExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CTExtensions.h"; sourceTree = "<group>"; };
+		07A20F7B18ED25B600E3E773 /* NSDate+CTExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CTExtensions.m"; sourceTree = "<group>"; };
+		07A20F7D18ED271100E3E773 /* NSString+CTExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CTExtensions.h"; sourceTree = "<group>"; };
+		07A20F7E18ED271100E3E773 /* NSString+CTExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CTExtensions.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		073A769818E953800039DBEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				073A76D418E954B00039DBEF /* CoreMotion.framework in Frameworks */,
+				073A76A118E953800039DBEF /* CoreGraphics.framework in Frameworks */,
+				073A76A318E953800039DBEF /* UIKit.framework in Frameworks */,
+				073A769F18E953800039DBEF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		073A76B318E953800039DBEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				073A76B818E953800039DBEF /* XCTest.framework in Frameworks */,
+				073A76BA18E953800039DBEF /* UIKit.framework in Frameworks */,
+				073A76B918E953800039DBEF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		073A769218E953800039DBEF = {
+			isa = PBXGroup;
+			children = (
+				073A76A418E953800039DBEF /* Motion */,
+				073A76BD18E953800039DBEF /* MotionTests */,
+				073A769D18E953800039DBEF /* Frameworks */,
+				073A769C18E953800039DBEF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		073A769C18E953800039DBEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				073A769B18E953800039DBEF /* Motion.app */,
+				073A76B618E953800039DBEF /* MotionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		073A769D18E953800039DBEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				073A76D318E954B00039DBEF /* CoreMotion.framework */,
+				073A769E18E953800039DBEF /* Foundation.framework */,
+				073A76A018E953800039DBEF /* CoreGraphics.framework */,
+				073A76A218E953800039DBEF /* UIKit.framework */,
+				073A76B718E953800039DBEF /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		073A76A418E953800039DBEF /* Motion */ = {
+			isa = PBXGroup;
+			children = (
+				073A76DB18E957D70039DBEF /* Addtions */,
+				073A76D518E955560039DBEF /* Views */,
+				073A76CD18E953BB0039DBEF /* Controllers */,
+				073A76AD18E953800039DBEF /* CTAppDelegate.h */,
+				073A76AE18E953800039DBEF /* CTAppDelegate.m */,
+				073A76B018E953800039DBEF /* Images.xcassets */,
+				073A76A518E953800039DBEF /* Supporting Files */,
+			);
+			path = Motion;
+			sourceTree = "<group>";
+		};
+		073A76A518E953800039DBEF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				073A76A618E953800039DBEF /* Motion-Info.plist */,
+				073A76A718E953800039DBEF /* InfoPlist.strings */,
+				073A76AA18E953800039DBEF /* main.m */,
+				073A76AC18E953800039DBEF /* Motion-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		073A76BD18E953800039DBEF /* MotionTests */ = {
+			isa = PBXGroup;
+			children = (
+				073A76C318E953810039DBEF /* MotionTests.m */,
+				073A76BE18E953800039DBEF /* Supporting Files */,
+			);
+			path = MotionTests;
+			sourceTree = "<group>";
+		};
+		073A76BE18E953800039DBEF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				073A76BF18E953800039DBEF /* MotionTests-Info.plist */,
+				073A76C018E953800039DBEF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		073A76CD18E953BB0039DBEF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				073A76CE18E953D60039DBEF /* CTMainController.h */,
+				073A76CF18E953D60039DBEF /* CTMainController.m */,
+				073A76D018E953D60039DBEF /* CTMainController.xib */,
+				07733A2518EA909A002AE039 /* CTStepCounterController.h */,
+				07733A2618EA909A002AE039 /* CTStepCounterController.m */,
+				07733A2718EA909A002AE039 /* CTStepCounterController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		073A76D518E955560039DBEF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				073A76D618E955B10039DBEF /* CTMotionDayView.h */,
+				073A76D718E955B10039DBEF /* CTMotionDayView.m */,
+				073A76D918E955C40039DBEF /* CTMotionDayView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		073A76DB18E957D70039DBEF /* Addtions */ = {
+			isa = PBXGroup;
+			children = (
+				073A76E218E958180039DBEF /* CTExtensions.h */,
+				073A76DC18E957D70039DBEF /* UITableViewCell+CTExtensions.h */,
+				073A76DD18E957D70039DBEF /* UITableViewCell+CTExtensions.m */,
+				073A76DE18E957D70039DBEF /* UIView+CTExtensions.h */,
+				073A76DF18E957D70039DBEF /* UIView+CTExtensions.m */,
+				07A20F7A18ED25B600E3E773 /* NSDate+CTExtensions.h */,
+				07A20F7B18ED25B600E3E773 /* NSDate+CTExtensions.m */,
+				07A20F7D18ED271100E3E773 /* NSString+CTExtensions.h */,
+				07A20F7E18ED271100E3E773 /* NSString+CTExtensions.m */,
+			);
+			path = Addtions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		073A769A18E953800039DBEF /* Motion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 073A76C718E953810039DBEF /* Build configuration list for PBXNativeTarget "Motion" */;
+			buildPhases = (
+				073A769718E953800039DBEF /* Sources */,
+				073A769818E953800039DBEF /* Frameworks */,
+				073A769918E953800039DBEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Motion;
+			productName = Motion;
+			productReference = 073A769B18E953800039DBEF /* Motion.app */;
+			productType = "com.apple.product-type.application";
+		};
+		073A76B518E953800039DBEF /* MotionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 073A76CA18E953810039DBEF /* Build configuration list for PBXNativeTarget "MotionTests" */;
+			buildPhases = (
+				073A76B218E953800039DBEF /* Sources */,
+				073A76B318E953800039DBEF /* Frameworks */,
+				073A76B418E953800039DBEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				073A76BC18E953800039DBEF /* PBXTargetDependency */,
+			);
+			name = MotionTests;
+			productName = MotionTests;
+			productReference = 073A76B618E953800039DBEF /* MotionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		073A769318E953800039DBEF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CT;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = ctrip;
+				TargetAttributes = {
+					073A76B518E953800039DBEF = {
+						TestTargetID = 073A769A18E953800039DBEF;
+					};
+				};
+			};
+			buildConfigurationList = 073A769618E953800039DBEF /* Build configuration list for PBXProject "Motion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 073A769218E953800039DBEF;
+			productRefGroup = 073A769C18E953800039DBEF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				073A769A18E953800039DBEF /* Motion */,
+				073A76B518E953800039DBEF /* MotionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		073A769918E953800039DBEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				073A76D218E953D60039DBEF /* CTMainController.xib in Resources */,
+				073A76A918E953800039DBEF /* InfoPlist.strings in Resources */,
+				07733A2918EA909A002AE039 /* CTStepCounterController.xib in Resources */,
+				073A76DA18E955C40039DBEF /* CTMotionDayView.xib in Resources */,
+				073A76B118E953800039DBEF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		073A76B418E953800039DBEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				073A76C218E953800039DBEF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		073A769718E953800039DBEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07733A2818EA909A002AE039 /* CTStepCounterController.m in Sources */,
+				07A20F7C18ED25B600E3E773 /* NSDate+CTExtensions.m in Sources */,
+				073A76D118E953D60039DBEF /* CTMainController.m in Sources */,
+				073A76E018E957D70039DBEF /* UITableViewCell+CTExtensions.m in Sources */,
+				073A76AB18E953800039DBEF /* main.m in Sources */,
+				073A76E118E957D70039DBEF /* UIView+CTExtensions.m in Sources */,
+				073A76D818E955B10039DBEF /* CTMotionDayView.m in Sources */,
+				073A76AF18E953800039DBEF /* CTAppDelegate.m in Sources */,
+				07A20F7F18ED271100E3E773 /* NSString+CTExtensions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		073A76B218E953800039DBEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				073A76C418E953810039DBEF /* MotionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		073A76BC18E953800039DBEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 073A769A18E953800039DBEF /* Motion */;
+			targetProxy = 073A76BB18E953800039DBEF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		073A76A718E953800039DBEF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				073A76A818E953800039DBEF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		073A76C018E953800039DBEF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				073A76C118E953800039DBEF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		073A76C518E953810039DBEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		073A76C618E953810039DBEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		073A76C818E953810039DBEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Motion/Motion-Prefix.pch";
+				INFOPLIST_FILE = "Motion/Motion-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		073A76C918E953810039DBEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Motion/Motion-Prefix.pch";
+				INFOPLIST_FILE = "Motion/Motion-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		073A76CB18E953810039DBEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Motion.app/Motion";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Motion/Motion-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MotionTests/MotionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		073A76CC18E953810039DBEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Motion.app/Motion";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Motion/Motion-Prefix.pch";
+				INFOPLIST_FILE = "MotionTests/MotionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		073A769618E953800039DBEF /* Build configuration list for PBXProject "Motion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				073A76C518E953810039DBEF /* Debug */,
+				073A76C618E953810039DBEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		073A76C718E953810039DBEF /* Build configuration list for PBXNativeTarget "Motion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				073A76C818E953810039DBEF /* Debug */,
+				073A76C918E953810039DBEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		073A76CA18E953810039DBEF /* Build configuration list for PBXNativeTarget "MotionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				073A76CB18E953810039DBEF /* Debug */,
+				073A76CC18E953810039DBEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 073A769318E953800039DBEF /* Project object */;
+}
