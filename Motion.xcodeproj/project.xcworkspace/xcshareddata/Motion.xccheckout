@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6810FA35-39B2-4BE7-9059-46726AA9DA17</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Motion</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E100AC0B-A799-43B1-AFE5-A48122FF3038</key>
+		<string>https://github.com/BoreyBoy/Motion.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Motion.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E100AC0B-A799-43B1-AFE5-A48122FF3038</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/BoreyBoy/Motion.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E100AC0B-A799-43B1-AFE5-A48122FF3038</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E100AC0B-A799-43B1-AFE5-A48122FF3038</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Motion</string>
+		</dict>
+	</array>
+</dict>
+</plist>

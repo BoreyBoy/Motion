@@ -8,8 +8,13 @@
 
 #import "CTStepCounterController.h"
 
+typedef NS_ENUM(NSInteger, CTButtonStartType) {
+    CTButtonStartTypeReset = 0  ,    // 默认，复位状态
+    CTButtonStartTypeRunning    ,    // Running状态
+    CTButtonStartTypePause      ,    // 暂停状态
+};
+
 @interface CTStepCounterController () {
-    BOOL isStart ;//是否已经开始
     NSDate* startDate ;//开始时间
     NSInteger totalSeconds ;//已经花费的时间，
     NSInteger totalStepCnt ;//已经花费的步伐
@@ -17,6 +22,7 @@
     NSInteger currentSeconds ;//现在花费的时间，
     NSInteger currentStepCnt ;//现在花费的步伐，
 }
+@property(nonatomic, assign) CTButtonStartType startType ;
 @property(nonatomic, strong) CMStepCounter* stepCounter ;
 @property(nonatomic, strong) NSOperationQueue* operationQueue ;
 
@@ -44,8 +50,10 @@
     self.operationQueue = [[NSOperationQueue alloc] init] ;
     
     // Do any additional setup after loading the view from its nib.
-    isStart = [[NSUserDefaults standardUserDefaults] boolForKey:@"isStart"] ;
-    if(isStart) {
+    self.startType = [[NSUserDefaults standardUserDefaults] integerForKey:@"startType"] ;
+    
+    //Running
+    if(self.startType==CTButtonStartTypeRunning) {
         NSString* string = [[NSUserDefaults standardUserDefaults] stringForKey:@"startDate"] ;
         startDate = [string dateWithFormat:@"yyyyMMddHHmmss"] ;
         totalSeconds = [[NSUserDefaults standardUserDefaults] integerForKey:@"totalSeconds"] ;
@@ -60,8 +68,38 @@
             [self updateTimeWithSeconds:totalSeconds+currentSeconds] ;
             [self updateStepWithCount:totalStepCnt+currentStepCnt] ;
             
-            [self handleEventStart] ;
+            [self startStepCounterTimer] ;
         }] ;
+    }
+    //Pause
+    else if(self.startType==CTButtonStartTypePause) {
+        totalSeconds = [[NSUserDefaults standardUserDefaults] integerForKey:@"totalSeconds"] ;
+        totalStepCnt = [[NSUserDefaults standardUserDefaults] integerForKey:@"totalStepCnt"] ;
+        
+        [self updateTimeWithSeconds:totalSeconds] ;
+        [self updateStepWithCount:totalStepCnt] ;
+    }
+    
+    //更新Buttons
+    [self updateButtonStates] ;
+}
+
+//更新Buttons
+- (void) updateButtonStates {
+    //Running
+    if(self.startType==CTButtonStartTypeRunning) {
+        [self.btnStart setTitle:@"停止" forState:UIControlStateNormal] ;
+        [self.btnReset setTitle:@"复位" forState:UIControlStateNormal] ;
+    }
+    //Pause
+    else if(self.startType==CTButtonStartTypePause) {
+        [self.btnStart setTitle:@"继续" forState:UIControlStateNormal] ;
+        [self.btnReset setTitle:@"复位" forState:UIControlStateNormal] ;
+    }
+    //Reset
+    else if(self.startType==CTButtonStartTypeReset) {
+        [self.btnStart setTitle:@"开始" forState:UIControlStateNormal] ;
+        [self.btnReset setTitle:@"复位" forState:UIControlStateNormal] ;
     }
 }
 
@@ -97,20 +135,42 @@
 }
 
 - (IBAction)onButtonStart:(id)sender {
-    if (isStart==NO) {
-        [self handleEventStart] ;
+    //Running
+    if(self.startType==CTButtonStartTypeRunning) {
+        [self.stepCounter stopStepCountingUpdates] ;
+        self.startType = CTButtonStartTypePause ;
+
+        totalSeconds += currentSeconds ;
+        totalStepCnt += currentStepCnt ;
+        currentSeconds = currentStepCnt = 0 ;
     }
+    //Pause & Reset
     else {
-        [self handleEventPause] ;
+        startDate = [NSDate date] ;
+        [self startStepCounterTimer] ;
+        self.startType = CTButtonStartTypeRunning ;
     }
+    [self updateButtonStates] ;
+    [self saveStates] ;
 }
 
 - (IBAction)onButtonReset:(id)sender {
-    [self handleEventReset] ;
+    [self.stepCounter stopStepCountingUpdates] ;
+    self.startType = CTButtonStartTypeReset ;
+
+    currentSeconds = currentStepCnt = 0 ;
+    totalSeconds = 0 ;
+    totalStepCnt = 0 ;
+    
+    [self updateTimeWithSeconds:totalSeconds] ;
+    [self updateStepWithCount:totalStepCnt] ;
+    [self updateButtonStates] ;
+    [self saveStates] ;
 }
 
 //开始
-- (void) handleEventStart {
+- (void) startStepCounterTimer {
+    self.startType = CTButtonStartTypeRunning ;
     [self.stepCounter startStepCountingUpdatesToQueue:self.operationQueue updateOn:1 withHandler:^(NSInteger numberOfSteps, NSDate *timestamp, NSError *error){
         currentStepCnt += 1 ;
         currentSeconds = [timestamp timeIntervalSinceDate:startDate] ;
@@ -122,39 +182,13 @@
     }] ;
 }
 
-//暂停
-- (void) handleEventPause {
-    [self.stepCounter stopStepCountingUpdates] ;
-    
-    [[NSUserDefaults standardUserDefaults] setInteger:totalSeconds+currentSeconds forKey:@"totalSeconds"] ;
-    [[NSUserDefaults standardUserDefaults] setInteger:totalStepCnt+currentStepCnt forKey:@"totalStepCnt"] ;
-    [[NSUserDefaults standardUserDefaults] synchronize] ;
-    
-    currentSeconds = 0 ;
-    currentStepCnt = 0 ;
-    startDate = nil ;
-}
-
-//重置
-- (void) handleEventReset {
-    [self.stepCounter stopStepCountingUpdates] ;
-    
-    isStart = NO ;
-    totalSeconds = 0 ;
-    totalStepCnt = 0 ;
-    
-    [[NSUserDefaults standardUserDefaults] setBool:isStart forKey:@"isStart"] ;
-    [[NSUserDefaults standardUserDefaults] setInteger:totalSeconds forKey:@"totalSeconds"] ;
-    [[NSUserDefaults standardUserDefaults] setInteger:totalStepCnt forKey:@"totalStepCnt"] ;
-    [[NSUserDefaults standardUserDefaults] synchronize] ;
-
-    [self updateTimeWithSeconds:totalSeconds] ;
-    [self updateStepWithCount:totalStepCnt] ;
-}
-
 //保存状态
 - (void) saveStates {
-    [[NSUserDefaults standardUserDefaults] setBool:isStart forKey:@"isStart"] ;
+    if(self.startType==CTButtonStartTypeRunning && startDate) {
+        NSString* string = [startDate stringWithFormat:@"yyyyMMddHHmmss"] ;
+        [[NSUserDefaults standardUserDefaults] setObject:string forKey:@"startDate"] ;
+    }
+    [[NSUserDefaults standardUserDefaults] setInteger:self.startType forKey:@"startType"] ;
     [[NSUserDefaults standardUserDefaults] setInteger:totalSeconds forKey:@"totalSeconds"] ;
     [[NSUserDefaults standardUserDefaults] setInteger:totalStepCnt forKey:@"totalStepCnt"] ;
     [[NSUserDefaults standardUserDefaults] synchronize] ;
